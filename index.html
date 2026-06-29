@@ -1,8 +1,88 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"><title>我的主页</title></head>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>陈昕航 | Xinhang Chen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <h1>Hello，我是 XXX</h1>
-  <p>这是我的个人主页。</p>
+  <header class="hero">
+    <div class="container hero-inner">
+      <img class="avatar" src="https://avatars.githubusercontent.com/xhchen28" alt="avatar" onerror="this.style.display='none'">
+      <div>
+        <h1>陈昕航 <span class="en">/ Xinhang Chen</span></h1>
+        <p class="tagline">AI Infra · 高性能计算 · 推理系统</p>
+        <p class="links">
+          <a href="mailto:your-email@example.com">Email</a> ·
+          <a href="https://github.com/xhchen28" target="_blank" rel="noopener">GitHub</a> ·
+          <a href="#publications">Publications</a> ·
+          <a href="#projects">Projects</a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        你好，我是 xhchen。目前关注 AI Infra 与高性能推理方向，
+        熟悉 CUDA / CUTLASS / CUTE、低精度计算（FP8 / FP4）以及大模型推理优化。
+        日常在 GPU kernel、调度策略与系统层面做一些性能工作。
+      </p>
+      <p>这里是一个个人主页占位，后续会逐步补充研究方向、项目与博客内容。</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skill-grid">
+        <li><strong>语言</strong><span>C++ / CUDA / Python</span></li>
+        <li><strong>GPU 编程</strong><span>CUTLASS, CUTE, Triton, TensorRT</span></li>
+        <li><strong>推理系统</strong><span>vLLM, SGLang, DeepGEMM, FlashAttention</span></li>
+        <li><strong>方向</strong><span>低精度量化, Paged Attention, Kernel Fusion</span></li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <article class="card">
+        <h3>DeepGEMM 学习笔记</h3>
+        <p>围绕 SM100 FP4 Paged MQA Logits 等 kernel 的源码阅读与实现分析。</p>
+      </article>
+      <article class="card">
+        <h3>CUTE / CUTLASS 实践</h3>
+        <p>Layout、Tensor、TiledMMA 等核心抽象的总结与示例代码。</p>
+      </article>
+      <article class="card">
+        <h3>Inference Stack 调研</h3>
+        <p>主流推理框架的调度、KV Cache 管理与算子实现对比。</p>
+      </article>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul class="pub-list">
+        <li>
+          <span class="pub-title">Placeholder Paper Title.</span>
+          <span class="pub-authors">X. Chen, et al.</span>
+          <span class="pub-venue">Venue, Year.</span>
+        </li>
+        <li>
+          <span class="pub-title">Another Placeholder Work.</span>
+          <span class="pub-authors">X. Chen, et al.</span>
+          <span class="pub-venue">Venue, Year.</span>
+        </li>
+      </ul>
+      <p class="note">* 占位内容，后续替换为真实发表。</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Xinhang Chen · Built with HTML/CSS · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
